@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LoginSvr": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)/config/LoginSvr.ini\""
+    }
+  }
+}

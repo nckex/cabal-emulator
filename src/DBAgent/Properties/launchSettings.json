@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DBAgent": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)/config/DBAgent.ini\""
+    }
+  }
+}

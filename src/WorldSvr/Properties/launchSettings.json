@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WorldSvr": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)/config/WorldSvr.ini\""
+    }
+  }
+}

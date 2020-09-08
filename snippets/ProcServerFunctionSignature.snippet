@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+   <CodeSnippet Format="1.0.0">
+      <Header>
+         <Title>Add new server proc function</Title>
+         <Shortcut>procs</Shortcut>
+      </Header>
+      <Snippet>
+         <Code Language="CSharp"><![CDATA[public static async ValueTask<bool> On$MethodName$($SessionName$ session, ArraySegment<byte> buffer)
+        {
+            return true;
+        }]]></Code>
+         <Declarations>
+            <Literal>
+               <ID>MethodName</ID>
+               <ToolTip>Method name</ToolTip>
+               <Default>SOMETHING</Default>
+            </Literal>
+            <Literal>
+               <ID>SessionName</ID>
+               <ToolTip>Session name</ToolTip>
+               <Default>Session</Default>
+            </Literal>
+         </Declarations>
+         <Imports>
+            <Import>
+               <Namespace>System</Namespace>
+            </Import>
+            <Import>
+               <Namespace>System.Threading.Tasks</Namespace>
+            </Import>
+         </Imports>
+      </Snippet>
+   </CodeSnippet>
+</CodeSnippets>

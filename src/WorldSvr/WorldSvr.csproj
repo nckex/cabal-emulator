@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HPT.Common\HPT.Common.csproj" />
+    <ProjectReference Include="..\HPT.Handlers\HPT.Handlers.csproj" />
+    <ProjectReference Include="..\HPT.Logging\HPT.Logging.csproj" />
+    <ProjectReference Include="..\HPT.Network\HPT.Network.csproj" />
+    <ProjectReference Include="..\Share\Share.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="System\Character\" />
+    <Folder Include="System\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="3.1.2" />
+  </ItemGroup>
+
+</Project>

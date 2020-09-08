@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GlobalMgrSvr": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)/config/GlobalMgrSvr.ini\""
+    }
+  }
+}
