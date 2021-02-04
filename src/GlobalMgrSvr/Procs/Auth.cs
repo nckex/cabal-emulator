@@ -31,7 +31,7 @@ namespace GlobalMgrSvr.Procs
             {
                 pUsername = username,
                 pPassword = password,
-                pIp = ipAddress
+                pIpAddress = ipAddress
             }, commandType: CommandType.StoredProcedure);
 
             if (spCabalAuthAccount == null)

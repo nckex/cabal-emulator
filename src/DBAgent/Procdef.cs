@@ -15,6 +15,7 @@ namespace DBAgent
 
         public static void RegisterProcs()
         {
+
             DBAgentProcMethodHandler
 
                 // CharLobby

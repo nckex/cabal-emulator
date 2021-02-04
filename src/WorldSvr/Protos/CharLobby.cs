@@ -12,27 +12,40 @@ namespace WorldSvr.Protos
             [FieldOrder(0)] public bool UseACSUB { get; set; }
             [FieldOrder(1)] [FieldLength(12)] public byte U0 { get; set; }
             [FieldOrder(2)] public byte U1 { get; set; }
-            [FieldOrder(3)] public int LastCharacter { get; set; }
-            [FieldOrder(4)] public int SlotOrder { get; set; }
-            [FieldOrder(5)] public int ExtendedCharCreation { get; set; }
-            [FieldOrder(6)] public List<S2C_GETMYCHARTR_CHARACTER> Characters { get; set; }
+            [FieldOrder(3)] public uint LastCharacter { get; set; }
+            [FieldOrder(4)] public uint SlotOrder { get; set; }
+            [FieldOrder(5)] public uint ExtendedCharCreation { get; set; }
+            [FieldOrder(6)] public int U2 { get; set; }
+            [FieldOrder(7)] [FieldLength(8)] public List<S2C_GETMYCHARTR_CHARACTER> Characters { get; set; }
         }
 
         public class S2C_GETMYCHARTR_CHARACTER
         {
-            [FieldOrder(0)] public int CharacterIdx { get; set; }
-            [FieldOrder(1)] public long CreationDate { get; set; }
-            [FieldOrder(2)] public int Style { get; set; }
-            [FieldOrder(3)] public int LEV { get; set; }
-            [FieldOrder(4)] public int Rank { get; set; }
-            [FieldOrder(5)] [FieldLength(9)] public byte U1 { get; set; }
-            [FieldOrder(6)] public byte WorldIdx { get; set; }
-            [FieldOrder(7)] public short PosX { get; set; }
-            [FieldOrder(8)] public short PosY { get; set; }
-            [FieldOrder(9)] [FieldLength(688 + 112)] public byte U2 { get; set; }
-            [FieldOrder(10)] public byte NameLen { get; set; }
-            [FieldOrder(11)] [FieldLength(nameof(NameLen))] public string Name { get; set; }
-            [FieldOrder(12)] [FieldLength(8)] public byte U3 { get; set; }
+            [FieldOrder(0)] public uint CharacterIdx { get; set; }
+            [FieldOrder(1)] public ulong CreationDate { get; set; }
+            [FieldOrder(2)] public uint Style { get; set; }
+            [FieldOrder(3)] public uint LEV { get; set; }
+            [FieldOrder(4)] public byte U0 { get; set; }
+
+            [FieldOrder(5)] public uint Rank { get; set; }
+            [FieldOrder(6)] public ushort U1 { get; set; }
+
+            [FieldOrder(7)] [FieldLength(17)] public string Name { get; set; }
+
+            [FieldOrder(8)] public ulong Reputation { get; set; }
+            [FieldOrder(9)] public ulong Alz { get; set; }
+            [FieldOrder(10)] public byte WorldIdx { get; set; }
+            [FieldOrder(11)] public ushort X { get; set; }
+            [FieldOrder(12)] public ushort Y { get; set; }
+
+            [FieldOrder(13)] public ushort EquippedItemCount { get; set; }
+
+            //[FieldOrder(14)] [FieldLength(1760)] public List<S2C_GETMYCHARTR_CHARACTER_EQUIPMENT> Equipments { get; set; }
+        }
+
+        public class S2C_GETMYCHARTR_CHARACTER_EQUIPMENT
+        {
+
         }
 
         public class S2C_SPECIALCHAREVT : S2C_HEADER

@@ -46,15 +46,14 @@ namespace WorldSvr.Procs
 
                 var s2cCharacter = new S2C_GETMYCHARTR_CHARACTER()
                 {
-                    CharacterIdx = ipsResultCharacter.CharacterIdx,
-                    CreationDate = ipsResultCharacter.CreationDate,
-                    LEV = ipsResultCharacter.LEV,
-                    Style = ipsResultCharacter.Style,
+                    CharacterIdx = (uint)ipsResultCharacter.CharacterIdx,
+                    CreationDate = (uint)ipsResultCharacter.CreationDate,
+                    LEV = (uint)ipsResultCharacter.LEV,
+                    Style = (uint)ipsResultCharacter.Style,
                     WorldIdx = ipsResultCharacter.WorldIdx,
-                    PosX = position.X,
-                    PosY = position.Y,
-                    Rank = ipsResultCharacter.Rank,
-                    NameLen = (byte)(name.Length + 1), // name len + nullbyte
+                    X = (ushort)position.X,
+                    Y = (ushort)position.Y,
+                    Rank = (uint)ipsResultCharacter.Rank,
                     Name = name + char.MinValue // name + nullbyte
                 };
 
@@ -64,9 +63,9 @@ namespace WorldSvr.Procs
             var s2cGetMyChartr = new S2C_GETMYCHARTR()
             {
                 UseACSUB = session.CharUserContext.UseACSUB,
-                LastCharacter = ipsResultGetChars.LastSelectedCharacterIdx,
-                SlotOrder = ipsResultGetChars.CharSlotOrder,
-                ExtendedCharCreation = session.CharUserContext.ExtendedCharCreation,
+                LastCharacter = (uint)ipsResultGetChars.LastSelectedCharacterIdx,
+                SlotOrder = (uint)ipsResultGetChars.CharSlotOrder,
+                ExtendedCharCreation = (uint)session.CharUserContext.ExtendedCharCreation,
                 Characters = s2cGetMyChartrChars
             };
 
